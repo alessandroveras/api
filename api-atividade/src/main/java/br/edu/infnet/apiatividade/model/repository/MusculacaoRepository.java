@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface MusculacaoRepository extends CrudRepository<Musculacao, Integer> {
 
-    @Query("from Musculacao b where b.usuario.id = :userid")
+    @Query("from Musculacao m where m.usuario.id = :userid")
     List<Musculacao> obterLista(Integer userid, Sort by);
 }
