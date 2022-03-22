@@ -1,4 +1,4 @@
-package br.edu.infnet.apiusuario.model.domain;
+package br.edu.infnet.apiatividade.model.domain;
 
 import javax.persistence.*;
 
