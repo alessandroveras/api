@@ -1,0 +1,1028 @@
+{
+	"info": {
+		"_postman_id": "6edca370-cbac-4295-8e15-9b9dcc82c735",
+		"name": "apis-mit-java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api-usuario:8081",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/usuario/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"usuario",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Pedrinho\",\r\n    \"email\": \"pedro@pedro.com\",\r\n    \"senha\": \"123\",\r\n    \"admin\": false,\r\n    \"endereco\": {\r\n        \"cep\": \"88888-999\",\r\n        \"logradouro\": \"Rua teste\",\r\n        \"complemento\": \"Complemento teste\",\r\n        \"bairro\": \"Bairro teste\",\r\n        \"localidade\": \"Localidade teste\",\r\n        \"uf\": \"RJ\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/usuario/incluir",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"usuario",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/usuario/3/excluir",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"usuario",
+								"3",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/usuario/validar?email=admin@mygym.com&senha=1234",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"usuario",
+								"validar"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "admin@mygym.com"
+								},
+								{
+									"key": "senha",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "qtde",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/usuario/qtde",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"usuario",
+								"qtde"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obterPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/usuario/2/obter",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"usuario",
+								"2",
+								"obter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api-professor:8084",
+			"item": [
+				{
+					"name": "professor-listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/professor/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"professor",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "professor-listaByUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/professor/2/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"professor",
+								"2",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "professor-incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Dona MM Maria\",\r\n    \"email\": \"maria@dona.com\",\r\n    \"cpf\": \"12312312312\",\r\n    \"endereco\": {\r\n        \"cep\": \"88888-999\",\r\n        \"logradouro\": \"Rua teste\",\r\n        \"complemento\": \"Complemento teste\",\r\n        \"bairro\": \"Bairro teste\",\r\n        \"localidade\": \"Localidade teste\",\r\n        \"uf\": \"RJ\"\r\n    },\r\n    \"usuario\": {\r\n        \"id\": \"1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/professor/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"professor",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "professor-excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/professor/3/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"professor",
+								"3",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "professor-qtde",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/professor/qtde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"professor",
+								"qtde"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "professor-obterPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/professor/1/obter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"professor",
+								"1",
+								"obter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api-atividade:8083",
+			"item": [
+				{
+					"name": "musculacao",
+					"item": [
+						{
+							"name": "musculacao-incluir",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"tipo\": \"Musculacao\",\r\n        \"descricao\": \"Musculacao by postman\",\r\n        \"duracaoMinutos\": 5,\r\n        \"intensidade\": \"Media\",\r\n        \"supervisionada\": true,\r\n        \"usuario\": {\r\n            \"id\": 2           \r\n        },\r\n        \"grupamentoMuscular\": \"Triceps\",\r\n        \"aparelho\": \"Barra\",\r\n        \"carga\": 10.0,\r\n        \"caloriasPorMinuto\": 5\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/api/atividade/incluir/musculacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"atividade",
+										"incluir",
+										"musculacao"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "musculacao-listar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/api/atividade/listar/musculacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"atividade",
+										"listar",
+										"musculacao"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "musculacao-qtde",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/api/atividade/qtde/musculacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"atividade",
+										"qtde",
+										"musculacao"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "musculacao-listaByUser",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/api/atividade/2/listar/musculacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"atividade",
+										"2",
+										"listar",
+										"musculacao"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "aerobico",
+					"item": [
+						{
+							"name": "aerobico-incluir",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \"tipo\": \"Aerobico\",\r\n        \"descricao\": \"Aerobico by Postman\",\r\n        \"duracaoMinutos\": 12,\r\n        \"intensidade\": \"Alta\",\r\n        \"supervisionada\": false,\r\n        \"usuario\": {\r\n            \"id\": 2\r\n        },\r\n        \"equipamento\": \"Escada Eliptica\",\r\n        \"coolDownMinutos\": 7,\r\n        \"usarCarga\": false,\r\n        \"caloriasPorMinuto\": 15\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/api/atividade/incluir/aerobico",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"atividade",
+										"incluir",
+										"aerobico"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "aerobico-listar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/api/atividade/listar/aerobico",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"atividade",
+										"listar",
+										"aerobico"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "aerobico-qtde",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/api/atividade/qtde/aerobico",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"atividade",
+										"qtde",
+										"aerobico"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "aerobico-listaByUser",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/api/atividade/2/listar/aerobico",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"atividade",
+										"2",
+										"listar",
+										"aerobico"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "atividade-listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elberth",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/atividade/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"atividade",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atividade-obterPorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elberth",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/atividade/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"atividade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atividade-listaByUser",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elberth",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/atividade/2/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"atividade",
+								"2",
+								"listar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atividade-excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/atividade/4/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"atividade",
+								"4",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atividade-qtde",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elberth",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/atividade/qtde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"atividade",
+								"qtde"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api-aula:8082",
+			"item": [
+				{
+					"name": "aula-listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elberth",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/aula/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"aula",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aula-obterPorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elberth",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/aula/1/obter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"aula",
+								"1",
+								"obter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aula-listaByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elberth",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/aula/2/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"aula",
+								"2",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aula-excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/aula/2/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"aula",
+								"2",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aula-incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"duracao\": 30,\r\n    \"professor\": {\r\n        \"id\": 1\r\n    },\r\n    \"atividades\": [\r\n        {\r\n            \"tipo\": \"Aerobico\",\r\n            \"id\": 2\r\n        },\r\n        {\r\n            \"tipo\": \"Musculacao\",\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"usuario\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/aula/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"aula",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aula-qtde",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/aula/qtde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"aula",
+								"qtde"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api-log:8085",
+			"item": [
+				{
+					"name": "log-listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "elberth",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/log/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"log",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "log-excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/log/2/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"log",
+								"2",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "log-incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Planilha 3 foi gerada\",\r\n    \"data\": \"2022-02-17T15:49:42\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/log/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"log",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
