@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/api.iml" filepath="$PROJECT_DIR$/.idea/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-pedido/api-aula.iml" filepath="$PROJECT_DIR$/api-pedido/api-aula.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-log/api-log.iml" filepath="$PROJECT_DIR$/api-log/api-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-produto/api-produto.iml" filepath="$PROJECT_DIR$/api-produto/api-produto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-solicitante/api-solicitante.iml" filepath="$PROJECT_DIR$/api-solicitante/api-solicitante.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-usuario/api-usuario.iml" filepath="$PROJECT_DIR$/api-usuario/api-usuario.iml" />
+    </modules>
+  </component>
+</project>
