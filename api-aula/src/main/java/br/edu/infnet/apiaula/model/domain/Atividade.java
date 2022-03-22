@@ -2,6 +2,7 @@ package br.edu.infnet.apiaula.model.domain;
 
 import br.edu.infnet.apiaula.model.exceptions.DuracaoMinutosInvalidException;
 import br.edu.infnet.apiaula.model.exceptions.IntensidadeInvalidException;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -35,14 +36,14 @@ public abstract class Atividade {
     private String intensidade;
     private Boolean supervisionada;
 
+    @ManyToMany(mappedBy = "atividades")
+    @JsonBackReference
+    private List<Aula> aulas;
+
     @ManyToOne
     @JoinColumn(name = "idUsuario")
     @JsonIgnore
     private Usuario usuario;
-
-    @ManyToMany(mappedBy = "atividades")
-    @JsonIgnore
-    private List<Aula> aulas;
 
     public Atividade() {
 

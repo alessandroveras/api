@@ -1,7 +1,6 @@
 package br.edu.infnet.apiaula.model.domain;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "TUsuario")
@@ -20,28 +19,8 @@ public class Usuario {
     @JoinColumn(name = "idendereco")
     private Endereco endereco;
 
-    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
-    @JoinColumn(name = "idUsuario")
-    private List<Professor> professores;
-
-    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
-    @JoinColumn(name = "idUsuario")
-    private List<Atividade> atividades;
-
-    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
-    @JoinColumn(name = "idUsuario")
-    private List<Aula> aulas;
-
     public Usuario() {
         this.admin = false;
-    }
-
-    public List<Atividade> getAtividades() {
-        return atividades;
-    }
-
-    public void setAtividades(List<Atividade> atividades) {
-        this.atividades = atividades;
     }
 
     public Integer getId() {
@@ -88,28 +67,12 @@ public class Usuario {
         this.admin = admin;
     }
 
-    public List<Professor> getProfessores() {
-        return professores;
-    }
-
-    public void setProfessores(List<Professor> professores) {
-        this.professores = professores;
-    }
-
     public Endereco getEndereco() {
         return endereco;
     }
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
-    }
-
-    public List<Aula> getAulas() {
-        return aulas;
-    }
-
-    public void setAulas(List<Aula> aulas) {
-        this.aulas = aulas;
     }
 
     @Override

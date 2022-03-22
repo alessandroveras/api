@@ -1,6 +1,7 @@
 package br.edu.infnet.apiaula.model.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -26,12 +27,10 @@ public class Aula {
     private Professor professor;
 
     @ManyToMany(cascade = CascadeType.DETACH)
-    @JsonIgnore
     private List<Atividade> atividades;
 
     @ManyToOne
     @JoinColumn(name = "idUsuario")
-    @JsonIgnore
     private Usuario usuario;
 
     public Aula() {
