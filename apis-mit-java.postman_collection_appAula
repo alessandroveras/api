@@ -9,7 +9,7 @@
 			"name": "api-usuario:8081",
 			"item": [
 				{
-					"name": "listar",
+					"name": "usuario-listar",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -29,7 +29,7 @@
 					"response": []
 				},
 				{
-					"name": "incluir",
+					"name": "usuario-incluir",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -58,7 +58,7 @@
 					"response": []
 				},
 				{
-					"name": "excluir",
+					"name": "usuario-excluir",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -79,7 +79,7 @@
 					"response": []
 				},
 				{
-					"name": "validar",
+					"name": "usuario-validar",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -109,7 +109,7 @@
 					"response": []
 				},
 				{
-					"name": "qtde",
+					"name": "usuario-qtde",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -129,7 +129,7 @@
 					"response": []
 				},
 				{
-					"name": "obterPorId",
+					"name": "usuario-obterPorId",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -204,7 +204,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"Dona MM Maria\",\r\n    \"email\": \"maria@dona.com\",\r\n    \"cpf\": \"12312312312\",\r\n    \"endereco\": {\r\n        \"cep\": \"88888-999\",\r\n        \"logradouro\": \"Rua teste\",\r\n        \"complemento\": \"Complemento teste\",\r\n        \"bairro\": \"Bairro teste\",\r\n        \"localidade\": \"Localidade teste\",\r\n        \"uf\": \"RJ\"\r\n    },\r\n    \"usuario\": {\r\n        \"id\": \"1\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"nome\": \"Dona MM Maria\",\r\n    \"email\": \"maria@dona.com\",\r\n    \"cpf\": \"12312312312\",\r\n    \"endereco\": {\r\n        \"cep\": \"88888-999\",\r\n        \"logradouro\": \"Rua teste\",\r\n        \"complemento\": \"Complemento teste\",\r\n        \"bairro\": \"Bairro teste\",\r\n        \"localidade\": \"Localidade teste\",\r\n        \"uf\": \"RJ\"\r\n    },\r\n    \"usuario\": {\r\n        \"id\": \"2\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
